@@ -1,7 +1,12 @@
 #dungeon.locationToString: A look up table for converting location ids to their names.
 def locationToString(loc):
-	if loc=="hill":
+	if loc=="tutorial":
+		return "Tutorial"
+	elif loc=="hill":
 		return "The Hill"
+	else:
+		return "Invalid Location"
+
 #dungeon.Game: Most of the game data is stored here.
 class Game:
 	def __init__(self):

@@ -15,7 +15,7 @@ newsave=False
 def writeEmpty(path):
 	global playername
 	with open(path,'w+') as f:
-		f.write("0\n20\n0\n"+playername+"\n3000\nhill\n[]")
+		f.write("999\n23\n59\n"+playername+"\n0\ntutorial\n[]")
 #Print if debug is enabled
 def debug(message):
 	if env_debug:
@@ -28,9 +28,9 @@ while True:
 	print("Enter path to a save or type \"New\" or \"Quit\"")
 	choice=input("><>")
 	if choice.lower()=="new":
-		print("00:00 Day 000")
-		print("The Hill")
-		print("----------, $----, 00 Items")
+		print("--:-- Day ---")
+		print("Tutoriall")
+		print("----------, $----, -- Items")
 		print()
 		choice=input("Create new save? [Y/n] ")
 		choice=choice.lower()
@@ -67,11 +67,6 @@ if newsave:
 	print("Enter path to save game:")
 	path=input("><>")
 	print("One moment...")
-	debug("Set hour to 20")
-	debug("Set minute to 0")
-	debug("Set name to \""+playername+"\"")
-	debug("Set money to 3000")
-	debug("Set location to \"hill\"")
 	print("Creating game...")
 	thisGame=dungeon.Game() #Load all game data
 	print("Saveing game...")
@@ -84,5 +79,5 @@ else:
 	print("Loading")
 	thisGame=dungeon.Game()
 	thisGame.setSave(path)
-	print("Lets go!")
+	print("Lets go!\n")
 	main.start(thisGame)
