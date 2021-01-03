@@ -35,3 +35,11 @@ Note: I dont spell werds and I write this in notepad so...
     - [ ] Spelling
     - [ ] Formatting
 - [x] Sync
+- [ ] Launcher
+    - [ ] Save load menu
+    - [ ] Save load functions
+    - [ ] Load classes for the game
+- [ ] class Game
+    - [ ] Basic I/O system
+    - [ ] Player inventory
+    - [ ] Tutorial
