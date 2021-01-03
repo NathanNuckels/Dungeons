@@ -1,3 +1,4 @@
+import sys
 import dungeon
 def generateSaveCard(path):
 	file=[]
@@ -18,4 +19,10 @@ def generateSaveCard(path):
 	print()
 	
 def start(game):
-	pass
+	if game.location=="tutorial":
+		game.tutorial()
+	else:
+		print("Nathan: I havn't programed that path yet.")
+		print("\n1 "+game.name.upper()+": Ok, I'll just leave here.")
+		input()
+		sys.exit()

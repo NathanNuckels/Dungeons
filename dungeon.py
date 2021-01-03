@@ -49,3 +49,50 @@ class Game:
 		self.location=file[5]
 		self.inventory=eval(file[6])
 		self.displaySave()
+
+
+	def tutorial(self):
+		print("Welcome to Dungeons, a basic text game.")
+		print("-- You are in a bright room. there is a table --")
+		while True:
+			print("TUTORIAL: Type \"view table\"")
+			command=input("><>").strip().lower().split(" ")
+			if (command[0]=="view" or command[0]=="v") and command[1]=="table":
+				break
+			else:
+				print("TUTORIAL: You can't do that now.")
+		print("TUTORIAL: Good! You can also type \"v\" for short.")
+		print("-- On the table is a key and a ticket --")
+		print("TUTORIAL: I would take the ticket. You might need it for later...")
+		while True:
+			print("TUTORIAL: Enter \"get ticket\"")
+			command=input("><>").strip().lower().split(" ")
+			if (command[0]=="get" or command[0]=="g") and command[1]=="ticket"):
+				break
+			else:
+				print("TUTORIAL: You can't do that now.")
+		print("TUTORIAL: Good! Like \"view\" can be \"v\", \"get\" can be shortened to \"g\"")
+		print("-- You take the ticket. --")
+		print("TUTORIAL: I wonder what kind of key it is. Is it a house hey?") 
+		print("Somthing mystic? Take a closer look.") 
+		while True:
+			print("TUTORIAL: Type \"v key\"")
+			command=input("><>").strip().lower().split(" ")
+			if command==["v", "key"]:
+				break
+			elif command[0]=="view":
+				print("TUTORIAL: Try useing the shortened version.")
+			else:
+				print("TUTORIAL: You can't do that now.")
+		print("-- The key is like a house key. 'brass` you assume. --")
+		print("TUTORIAL: Well... now what? There might be more stuff in the room")
+		print("that you dont know about. Try listing the objects.")
+		while True:
+			print("TUTORIAL: List objects with \"list obj\" or \"l o\"")
+			command=input("><>").strip().lower().split(" ")
+			if command[1]=="object" or command[1]=="objects":
+				print("Hint: type \"obj\"")
+			if command==["l","obj"] or command==["list","o"]:
+				print("Tip: Dont combine the long and short versions of commands.")
+				print("THe code processing commands might not catch it.")
+			if command
