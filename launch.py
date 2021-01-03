@@ -1,3 +1,4 @@
+import main
 import dungeon
 
 with open("developer-settings","r") as f:
@@ -15,7 +16,7 @@ while True:
 	print("Welcome to DUNGEONS!")
 	print()
 	print("Enter path to a save or type \"New\" or \"Quit\"")
-	choice=imput("><>")
+	choice=input("><>")
 	if choice.lower()=="new":
 		print("00:00 Day 00 Level 00")
 		print("The Hill")
@@ -47,9 +48,9 @@ if newsave:
 print("One moment...")
 debug("Set hour to 20")
 debug("Set minute to 0")
-debug("Set name to \""+playername"\"")
+debug("Set name to \""+playername+"\"")
 debug("Set money to 3000")
 debug("Set location to \"hill\"")
-thisGame=new dungeon.Game()
-thisGame.setSave(20,0,playername,300,"hill")
+thisGame=dungeon.Game()
+thisGame.setSave(20,0,0,playername,300,"hill")
 main.start(thisGame)
