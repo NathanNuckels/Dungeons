@@ -1,4 +1,4 @@
-#Welcome to Dungons
+#Welcome to Dungeons
 
 This is a basic text based RPG I am working on. I will write in in python and then slowly port it
 to C# Over time 
@@ -30,8 +30,8 @@ Note: I dont spell werds and I write this in notepad so...
 
 #Developer notes
 
-- [ ] Create repo
+- [x] Create repo
 - [ ] README
     - [ ] Spelling
     - [ ] Formatting
-- [ ] Sync
+- [x] Sync
