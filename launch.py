@@ -21,9 +21,9 @@ while True:
 	print("Enter path to a save or type \"New\" or \"Quit\"")
 	choice=input("><>")
 	if choice.lower()=="new":
-		print("00:00 Day 00 Level 00")
+		print("00:00 Day 000")
 		print("The Hill")
-		print("----------, $----")
+		print("----------, $----, 00 Items")
 		print()
 		choice=input("Create new save? [Y/n] ")
 		choice=choice.lower()

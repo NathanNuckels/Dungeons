@@ -1,3 +1,6 @@
+def locationToString(loc):
+	if loc=="hill":
+		return "The Hill"
 class Game:
 	def __init__(self):
 		self.hour=0
@@ -8,6 +11,23 @@ class Game:
 		self.location=""
 		self.inventory=[]
 		self.savePath=""
+
+
+	def displaySave(self):
+		strHour=("0"*(2-len(str(self.hour))))+str(self.hour)
+		strMinute=("0"*(2-len(str(self.minute))))+str(self.minute)
+		strDay=("0"*(3-len(str(self.day))))+str(self.day)
+		strName=self.name+("_"*(10-len(self.name)))
+		strMoney=("0"*(4-len(str(self.money))))+str(self.money)
+		strLoc=locationToString(self.location)
+		strItems=("0"*(2-len(self.inventory)))+str(len(self.inventory))
+		print()
+		print(strHour+":"+strMinute+" Day "+strDay)
+		print(strLoc)
+		print(strName+", $"+strMoney+", "+strItems+" Items")
+		print()
+
+
 	def setSave(self,save):
 		self.savePath=save		
 		file=[]
@@ -21,7 +41,4 @@ class Game:
 		self.money=int(file[4])
 		self.location=file[5]
 		self.inventory=eval(file[6])
-		print("Day is "+str(self.day)+", TIme is "+str(self.hour)+":"+str(self.minute))
-		print(self.name.upper()+" at "+self.location+" with $"+str(self.money))
-		print("Holding:")
-		print(self.inventory)
+		self.displaySave()
