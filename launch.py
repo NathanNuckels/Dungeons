@@ -1,3 +1,4 @@
+import os
 import main
 import dungeon
 
@@ -39,7 +40,14 @@ while True:
 	elif choice.lower()=="exit" or choice.lower()=="quit":
 		print("OK, Bye!")
 	else:
-		print("Sorry, we don't support loading and saveing yet...")
+		if not os.path.exists(choice):
+			print("File does not exist.")
+		else:
+			main.generateSaveCard(choice)
+			path=choice
+			choice=input("Load this save? [y/N] ").lower()
+			if choice=="y" or choice=="yes":
+				break
 
 if newsave:
 	#Player name shell
@@ -72,3 +80,9 @@ if newsave:
 	thisGame.setSave(path) #opens the empty file
 	print("Lets go!\n")
 	main.start(thisGame) #Starts the game. See /root/git/main.py
+else:
+	print("Loading")
+	thisGame=dungeon.Game()
+	thisGame.setSave(path)
+	print("Lets go!")
+	main.start(thisGame)

@@ -35,12 +35,12 @@ Note: I dont spell werds and I write this in notepad so...
     - [ ] Spelling
     - [ ] Formatting
 - [x] Sync
-- [ ] Launcher
+- [x] Launcher
     - [x] Save load menu
     - [x] Save function
-    - [ ] Load function
+    - [x] Load function
     - [x] Load classes for the game
 - [ ] class Game
     - [ ] Basic I/O system
     - [x] Player inventory
-    - [ ] Tutorial
+    - [ ] Tutorial [In progress]
