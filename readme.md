@@ -37,9 +37,10 @@ Note: I dont spell werds and I write this in notepad so...
 - [x] Sync
 - [ ] Launcher
     - [x] Save load menu
-    - [ ] Save load functions
+    - [x] Save function
+    - [ ] Load function
     - [x] Load classes for the game
 - [ ] class Game
     - [ ] Basic I/O system
-    - [ ] Player inventory
+    - [x] Player inventory
     - [ ] Tutorial

@@ -1,6 +1,8 @@
+#dungeon.locationToString: A look up table for converting location ids to their names.
 def locationToString(loc):
 	if loc=="hill":
 		return "The Hill"
+#dungeon.Game: Most of the game data is stored here.
 class Game:
 	def __init__(self):
 		self.hour=0
@@ -12,7 +14,7 @@ class Game:
 		self.inventory=[]
 		self.savePath=""
 
-
+	#Displays a save card
 	def displaySave(self):
 		strHour=("0"*(2-len(str(self.hour))))+str(self.hour)
 		strMinute=("0"*(2-len(str(self.minute))))+str(self.minute)
@@ -27,7 +29,7 @@ class Game:
 		print(strName+", $"+strMoney+", "+strItems+" Items")
 		print()
 
-
+	#Sets a save path and loads it
 	def setSave(self,save):
 		self.savePath=save		
 		file=[]
