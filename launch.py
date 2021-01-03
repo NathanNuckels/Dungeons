@@ -1,3 +1,4 @@
+import sys
 import os
 import main
 import dungeon
@@ -39,6 +40,7 @@ while True:
 			break #Quit the LOAD shell
 	elif choice.lower()=="exit" or choice.lower()=="quit":
 		print("OK, Bye!")
+		sys.exit()
 	else:
 		if not os.path.exists(choice):
 			print("File does not exist.")
