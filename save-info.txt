@@ -1,0 +1,9 @@
+Each line is a peramiter:
+
+Day [0-65535]
+Hour [0-23]
+Minute [0-59]
+Name [A-Z,a-z,0-9 length 3-10]
+Money [0-65535]
+Location
+[["Item",Ammount],["Item",Ammount]...]

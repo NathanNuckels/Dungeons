@@ -7,7 +7,10 @@ with open("developer-settings","r") as f:
 		if line[0]=="debug":
 			env_debug=line[1]=="true"
 newsave=False
-
+def writeEmpty(path):
+	global playername
+	with open(path,'w+') as f:
+		f.write("0\n20\n0\n"+playername+"\n3000\nhill\n[]")
 def debug(message):
 	if env_debug:
 		print("[Debug] "+message)
@@ -45,12 +48,20 @@ if newsave:
 		else:
 			print("Cool name!")
 			break
-print("One moment...")
-debug("Set hour to 20")
-debug("Set minute to 0")
-debug("Set name to \""+playername+"\"")
-debug("Set money to 3000")
-debug("Set location to \"hill\"")
-thisGame=dungeon.Game()
-thisGame.setSave(20,0,0,playername,300,"hill")
-main.start(thisGame)
+if newsave:
+	print("Enter path to save game:")
+	path=input("><>")
+	print("One moment...")
+	debug("Set hour to 20")
+	debug("Set minute to 0")
+	debug("Set name to \""+playername+"\"")
+	debug("Set money to 3000")
+	debug("Set location to \"hill\"")
+	print("Creating game...")
+	thisGame=dungeon.Game()
+	print("Saveing game...")
+	writeEmpty(path)
+	print("Loading game...")
+	thisGame.setSave(path)
+	print("Lets go!\n")
+	main.start(thisGame)
